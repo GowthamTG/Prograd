@@ -38,8 +38,10 @@
   justify-content: flex-start;
   align-items: center;
 }
-.side-nav-item.active {
+.side-nav-item.active,
+.side-nav-item:hover {
   background-color: #34373c;
+  /* background-color: #f56676 !important; */
 }
 .side-nav-icon {
   padding: 0.5rem 1rem;
@@ -47,9 +49,11 @@
   color: #7f7f7f;
   border-left: 4px solid transparent;
 }
-.side-nav-icon.active {
+.side-nav-icon.active,
+.side-nav-icon:hover {
   color: #f56676;
   border-left: 4px solid #f56676;
+  transition: all 0.5s;
 }
 
 .side-nav-text {
@@ -60,7 +64,8 @@
   font-size: 1.2rem;
 }
 
-.side-nav-text.active {
+.side-nav-text.active,
+.side-nav-text:hover {
   color: #adaeb0;
 }
 
@@ -189,13 +194,21 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
-.nav-content-button {
+.nav-content-button,
+.nav-content-button::after {
   padding: 0.5rem 1.5rem;
   margin: 1rem;
   border-radius: 10rem;
   border: 1px solid #7f7f7f;
   color: #7f7f7f;
   background-color: #34373c;
+  transition: all 0.2s;
+}
+
+.nav-content-button:hover {
+  border: 1px solid #adaeb0;
+  color: #adaeb0;
+  transition: all 0.2s;
 }
 
 .main {
@@ -205,10 +218,47 @@
   background: #23232b;
   padding: 1rem 2rem;
 }
-
+@media only screen and (min-width: 1028px) {
+  .mobile {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1028px) {
   .main {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .side-nav {
+    display: none;
+  }
+  .nav-content {
+    justify-content: center;
+  }
+  .nav-content-greet {
+    display: none;
+  }
+  /* .side-nav-icon {
+    display: none;
+  } */
+  .side-nav-bell {
+    display: none;
+  }
+  .nav-image-box {
+    display: none;
+  }
+  .nav-text {
+    display: none;
+  }
+
+  .nav-content-image-box {
+    display: none;
+  }
+
+  .nav {
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    padding: 0.5rem;
   }
 }
 
@@ -229,8 +279,7 @@
 }
 .others {
   /* border: 2px solid red; */
-
-  width: 20rem;
+  width: 325px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -332,4 +381,11 @@
   height: 4rem;
   border-radius: 100rem;
   margin-right: 1rem;
+}
+.no-border {
+  border: none !important;
+  background-color: transparent !important;
+}
+.hamburger {
+  font-size: 1.5rem;
 }
