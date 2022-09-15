@@ -16,16 +16,33 @@
       src="https://kit.fontawesome.com/6631b3c549.js"
       crossorigin="anonymous"
     ></script>
+    <script src="dashboard.js"></script>
   </head>
   <body>
     <!-- <div></div> -->
     <div class="page">
-      <section class="side-nav">
-        <div class="logo-box">
+      <section id="side-nav" class="side-nav">
+        <div class="logo-box" onclick="openSideNav()">
           <i class="logo fa-brands fa-windows"></i>
           <div class="logo-text">Dashboard</div>
         </div>
         <div class="side-nav-content">
+          <div class="side-nav-group mobile">
+            <div class="side-nav-item-greet">
+              <div class="side-nav-content-image-box">
+                <img
+                  class="nav-content-image"
+                  src="https://avatars.githubusercontent.com/u/40751854?v=4"
+                  alt=""
+                />
+              </div>
+              <div class="side-nav-content-greet">
+                <div class="side-nav-content-hello">Hi There!</div>
+                <div class="side-nav-content-username">Gowtham T G</div>
+              </div>
+            </div>
+          </div>
+
           <div class="side-nav-group">
             <div class="side-nav-item active">
               <div class="side-nav-icon active">
@@ -91,7 +108,7 @@
           <nav class="nav">
             <div class="nav-group mobile">
               <div class="side-nav-icon mobile hamburger">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="openSideNav()"></i>
               </div>
             </div>
             <div class="nav-group">
@@ -102,7 +119,7 @@
                 <input class="search-input" type="text" />
               </div>
             </div>
-            <div class="nav-group">
+            <div class="nav-group hide">
               <div class="side-nav-icon side-nav-bell">
                 <i class="fa-solid fa-bell"></i>
               </div>
