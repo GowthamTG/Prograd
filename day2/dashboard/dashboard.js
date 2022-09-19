@@ -1,10 +1,6 @@
 var openSideNav = () => {
   const sideBarDisplay = document.getElementById("side-nav").style.display;
   console.log(sideBarDisplay.length);
-  console.log(document.getElementById("side-nav").style.display);
-  console.log(document.getElementById("side-nav").style.position);
-  console.log(document.getElementById("side-nav").style.height);
-  console.log(document.getElementById("side-nav").style.zIndex);
   const width = screen.width;
   if (screen.width > 1080) {
     document.getElementById("side-nav").style.display = "block";

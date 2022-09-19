@@ -58,6 +58,7 @@
 }
 .side-nav-icon {
   padding: 0.5rem 1rem;
+  width: 1rem;
   font-size: 1rem;
   color: #7f7f7f;
   border-left: 4px solid transparent;
@@ -332,6 +333,7 @@
 .people {
   display: flex;
   flex-flow: column wrap;
+  /* border: 2px solid red; */
 }
 .main-heading {
   color: #adaeb0;
